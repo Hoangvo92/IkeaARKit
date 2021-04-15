@@ -9,7 +9,8 @@ public class ButtonManager : MonoBehaviour
 
     private Button btn;
     public GameObject furniture;
-
+    //public
+//pass the list of links in here, choose number, and instantiate the furniture via asset bundle
 
     // Start is called before the first frame update
     void Start()
