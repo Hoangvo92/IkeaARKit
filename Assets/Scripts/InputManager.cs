@@ -40,7 +40,7 @@ public class InputManager : ARBaseGestureInteractable
         if(GestureTransformationUtility.Raycast(gesture.startPosition, _hits,
                UnityEngine.XR.ARSubsystems.TrackableType.PlaneWithinPolygon))
         {
-            GameObject placedObj = Instantiate(DataHandler.Instance.GetFurniture(), pose.position, pose.rotation);
+            GameObject placedObj = Instantiate(DataHandler.Instance.GetFurniture(), pose.position, pose.rotation) as GameObject;
 
             var anchorObject = new GameObject("placementAnchor");
             anchorObject.transform.position = pose.position;
