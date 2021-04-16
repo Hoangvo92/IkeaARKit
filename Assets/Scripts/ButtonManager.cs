@@ -8,7 +8,27 @@ public class ButtonManager : MonoBehaviour
 {
 
     private Button btn;
-    public GameObject furniture;
+    [SerializeField] private RawImage buttonImage;
+
+  //  public GameObject furniture;
+
+    private int _itemId;
+    private Sprite _buttonTexture;
+    public Sprite ButtonTexture
+    {
+        set
+        {
+            _buttonTexture = value;
+            buttonImage.texture = _buttonTexture.texture;
+        }
+    }
+
+    public int ItemId
+    {
+        set{  _itemId = value;}
+    }
+
+    public
     //public
 //pass the list of links in here, choose number, and instantiate the furniture via asset bundle
 
@@ -36,6 +56,7 @@ public class ButtonManager : MonoBehaviour
 
     void SelectObject()
     {
-        DataHandler.Instance.furniture = furniture;
+        // DataHandler.Instance.furniture = furniture;
+        DataHandler.Instance.SetFurniture(_itemId);
     }
 }

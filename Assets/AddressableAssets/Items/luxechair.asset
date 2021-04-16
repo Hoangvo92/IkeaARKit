@@ -1,0 +1,18 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 94a48b585ad4d4672a2a712e983c0ee7, type: 3}
+  m_Name: luxechair
+  m_EditorClassIdentifier: 
+  price: 200
+  itemPrefab: {fileID: 2640370902237820904, guid: ac649ba337405414184e093ec3eaa574,
+    type: 3}
+  itemImage: {fileID: 21300000, guid: 5d1753493ae7e4f0db8b32797ae307a5, type: 3}

@@ -1,0 +1,41 @@
+ManifestFileVersion: 0
+CRC: 3574557932
+AssetBundleManifest:
+  AssetBundleInfos:
+    Info_0:
+      Name: tablerus
+      Dependencies:
+        Dependency_0: table
+    Info_1:
+      Name: victoriansofa
+      Dependencies: {}
+    Info_2:
+      Name: doublesofa
+      Dependencies: {}
+    Info_3:
+      Name: table
+      Dependencies: {}
+    Info_4:
+      Name: shezlong
+      Dependencies: {}
+    Info_5:
+      Name: gamechair
+      Dependencies: {}
+    Info_6:
+      Name: luxechair
+      Dependencies: {}
+    Info_7:
+      Name: futonchair
+      Dependencies: {}
+    Info_8:
+      Name: armchair
+      Dependencies: {}
+    Info_9:
+      Name: furniture
+      Dependencies: {}
+    Info_10:
+      Name: plant
+      Dependencies: {}
+    Info_11:
+      Name: sofa
+      Dependencies: {}

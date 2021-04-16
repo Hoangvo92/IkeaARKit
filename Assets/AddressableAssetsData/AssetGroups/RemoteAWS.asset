@@ -1,0 +1,109 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bbb281ee3bf0b054c82ac2347e9e782c, type: 3}
+  m_Name: RemoteAWS
+  m_EditorClassIdentifier: 
+  m_GroupName: RemoteAWS
+  m_Data:
+    m_SerializedData: []
+  m_GUID: ccc99e86bcafd46f4958e9c3e72c91b6
+  m_SerializeEntries:
+  - m_GUID: a1d56308607134523a3acd6bafc711cf
+    m_Address: Assets/AddressableAssets/Items/plant.asset
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - furniture
+    m_MainAsset: {fileID: 0}
+    m_TargetAsset: {fileID: 0}
+  - m_GUID: 11a2afd00edda4e968dcaa46c1f6a0cf
+    m_Address: Assets/AddressableAssets/Items/luxechair.asset
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - furniture
+    m_MainAsset: {fileID: 0}
+    m_TargetAsset: {fileID: 0}
+  - m_GUID: c1f50b5533fcb47a19be11cbc12375f3
+    m_Address: Assets/AddressableAssets/Items/armchair.asset
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - furniture
+    m_MainAsset: {fileID: 11400000, guid: c1f50b5533fcb47a19be11cbc12375f3, type: 2}
+    m_TargetAsset: {fileID: 11400000, guid: c1f50b5533fcb47a19be11cbc12375f3, type: 2}
+  - m_GUID: 34b37d6f753544cdd8b8283aa829715a
+    m_Address: Assets/AddressableAssets/Items/victorianSofa.asset
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - furniture
+    m_MainAsset: {fileID: 0}
+    m_TargetAsset: {fileID: 0}
+  - m_GUID: c29ab82eb1f49424a915319b0d99956f
+    m_Address: Assets/AddressableAssets/Items/sofa.asset
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - furniture
+    m_MainAsset: {fileID: 11400000, guid: c29ab82eb1f49424a915319b0d99956f, type: 2}
+    m_TargetAsset: {fileID: 11400000, guid: c29ab82eb1f49424a915319b0d99956f, type: 2}
+  - m_GUID: 3496f00567b7a48b78167a6f4e2bc602
+    m_Address: Assets/AddressableAssets/Items/furniture1.asset
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - furniture
+    m_MainAsset: {fileID: 0}
+    m_TargetAsset: {fileID: 0}
+  - m_GUID: b991ea896765e4e089cb07f583063d4d
+    m_Address: Assets/AddressableAssets/Items/bedfloor.asset
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - furniture
+    m_MainAsset: {fileID: 0}
+    m_TargetAsset: {fileID: 0}
+  - m_GUID: 3bdff4077713649f8aa23dfa3bf79f96
+    m_Address: Assets/AddressableAssets/Items/bed2.asset
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - furniture
+    m_MainAsset: {fileID: 0}
+    m_TargetAsset: {fileID: 0}
+  - m_GUID: 3c6373a3c30624daf894c196a6aa91f4
+    m_Address: Assets/AddressableAssets/Items/officeChair.asset
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - furniture
+    m_MainAsset: {fileID: 0}
+    m_TargetAsset: {fileID: 0}
+  - m_GUID: 1de34d1ddea394cb6b899fb0901cb0f9
+    m_Address: Assets/AddressableAssets/Items/bedpillows.asset
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - furniture
+    m_MainAsset: {fileID: 0}
+    m_TargetAsset: {fileID: 0}
+  - m_GUID: fd56906932fab4ed8ba1f72aebd3b60b
+    m_Address: Assets/AddressableAssets/Items/tableRus.asset
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - furniture
+    m_MainAsset: {fileID: 0}
+    m_TargetAsset: {fileID: 0}
+  - m_GUID: bf4540cd526c5488d9f5116cefd8ba15
+    m_Address: Assets/AddressableAssets/Items/futonSofa.asset
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - furniture
+    m_MainAsset: {fileID: 0}
+    m_TargetAsset: {fileID: 0}
+  m_ReadOnly: 0
+  m_Settings: {fileID: 11400000, guid: 7d5e2aadfcb50448eb779ecc79a6147d, type: 2}
+  m_SchemaSet:
+    m_Schemas:
+    - {fileID: 11400000, guid: b1c714eb0abe54ba2b6455b23f49ab7c, type: 2}
+    - {fileID: 11400000, guid: 85903407a0ab347aebcd79bda54cff5d, type: 2}

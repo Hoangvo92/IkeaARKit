@@ -3,8 +3,9 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.XR.ARFoundation;
 using UnityEngine.EventSystems;
+using UnityEngine.XR.Interaction.Toolkit.AR;
 
-public class InputManager : MonoBehaviour
+public class InputManager : ARBaseGestureInteractable
 {
     //[SerializeField] private GameObject arObj;
     [SerializeField] private Camera arCam;
@@ -16,65 +17,128 @@ public class InputManager : MonoBehaviour
 
     [SerializeField]private GameObject crossHair;
     private Pose pose;
+   // private RaycastCommand hit;
     // Start is called before the first frame update
     void Start()
     {
       
     }
 
-    // Update is called once per frame
-    void Update()
+    protected override bool CanStartManipulationForGesture(TapGesture gesture)
     {
-        CrosshairCalculation();
-        touch = Input.GetTouch(0);
-        if (Input.touchCount < 0 || touch.phase != TouchPhase.Began)
+       if(gesture.TargetObject == null) { return true; }
+       return false;
+    }
+
+    protected override void OnEndManipulation(TapGesture gesture)
+    {
+        if (gesture.WasCancelled) { return; }
+        if (gesture.TargetObject != null || IsPointerOverUI(gesture))
         {
             return;
         }
+        if(GestureTransformationUtility.Raycast(gesture.startPosition, _hits,
+               UnityEngine.XR.ARSubsystems.TrackableType.PlaneWithinPolygon))
+        {
+            GameObject placedObj = Instantiate(DataHandler.Instance.GetFurniture(), pose.position, pose.rotation);
 
-        if (IsPointerOverUI(touch)) return;
-        Instantiate(DataHandler.Instance.furniture, pose.position, pose.rotation);
-        //-------------------------------
-
-        // Ray ray = arCam.ScreenPointToRay(touch.position);
-        //if (_raycastManager.Raycast(ray, _hits))
-        // {
-        //     Pose pose = _hits[0].pose;
-        //   //Instantiate(arObj, pose.position, pose.rotation);
-        //   Instantiate(DataHandler.Instance.furniture, pose.position, pose.rotation);
-        //}
-        //-------------------------------------
-
-      //   if (Input.GetMouseButtonDown(0))
-     //   {
-     //       Ray ray = arCam.ScreenPointToRay(Input.mousePosition);
-     //       if (_raycastManager.Raycast(ray, _hits))
-      //      {
-      //          Pose pose = _hits[0].pose;
-      //         //Instantiate(arObj, pose.position, pose.rotation);
-      //         Instantiate(DataHandler.Instance.furniture, pose.position, pose.rotation);
-      //     }
-      //   }
+            var anchorObject = new GameObject("placementAnchor");
+            anchorObject.transform.position = pose.position;
+            anchorObject.transform.rotation = pose.rotation;
+            placedObj.transform.parent = anchorObject.transform;
+        }
     }
 
-    bool IsPointerOverUI(Touch touch)
+    bool IsPointerOverUI(TapGesture touch)
     {
         PointerEventData eventData = new PointerEventData(EventSystem.current);
-        eventData.position = new Vector2(touch.position.x, touch.position.y);
+        eventData.position = new Vector2(touch.startPosition.x, touch.startPosition.y);
         List<RaycastResult> results = new List<RaycastResult>();
         EventSystem.current.RaycastAll(eventData, results);
         return results.Count > 0;
     }
-
     void CrosshairCalculation()
     {
         Vector3 origin = arCam.ViewportToScreenPoint(new Vector3(0.5f, 0.5f, 0));
-        Ray ray = arCam.ScreenPointToRay(origin);
-        if (_raycastManager.Raycast(ray, _hits))
+     //   Ray ray = arCam.ScreenPointToRay(origin);
+
+        if (GestureTransformationUtility.Raycast(origin, _hits, UnityEngine.XR.ARSubsystems.TrackableType.PlaneWithinPolygon))
         {
-             pose = _hits[0].pose;
+            pose = _hits[0].pose;
             crossHair.transform.position = pose.position;
             crossHair.transform.eulerAngles = new Vector3(90, 0, 0);
         }
+
+    }
+
+    //update is called once per frame
+    private void FixedUpdate()
+    {
+        CrosshairCalculation();
     }
 }
+
+
+// Update is called once per frame
+//void Update()
+//{
+//    CrosshairCalculation();
+//    touch = Input.GetTouch(0);
+//    if (Input.touchCount < 0 || touch.phase != TouchPhase.Began)
+//    {
+//        return;
+//    }
+
+//    if (IsPointerOverUI(touch)) return;
+//    //Instantiate(DataHandler.Instance.furniture, pose.position, pose.rotation);
+//    Instantiate(DataHandler.Instance.GetFurniture(), pose.position, pose.rotation);
+//}
+//-------------------------------
+
+// Ray ray = arCam.ScreenPointToRay(touch.position);
+//if (_raycastManager.Raycast(ray, _hits))
+// {
+//     Pose pose = _hits[0].pose;
+//   //Instantiate(arObj, pose.position, pose.rotation);
+//   Instantiate(DataHandler.Instance.furniture, pose.position, pose.rotation);
+//}
+//-------------------------------------
+
+//   if (Input.GetMouseButtonDown(0))
+//   {
+//       Ray ray = arCam.ScreenPointToRay(Input.mousePosition);
+//       if (_raycastManager.Raycast(ray, _hits))
+//      {
+//          Pose pose = _hits[0].pose;
+//         //Instantiate(arObj, pose.position, pose.rotation);
+//         Instantiate(DataHandler.Instance.furniture, pose.position, pose.rotation);
+//     }
+//   }
+//}
+
+//bool IsPointerOverUI(Touch touch)
+//{
+//    PointerEventData eventData = new PointerEventData(EventSystem.current);
+//    eventData.position = new Vector2(touch.position.x, touch.position.y);
+//    List<RaycastResult> results = new List<RaycastResult>();
+//    EventSystem.current.RaycastAll(eventData, results);
+//    return results.Count > 0;
+//}
+
+//void CrosshairCalculation()
+//{
+//    Vector3 origin = arCam.ViewportToScreenPoint(new Vector3(0.5f, 0.5f, 0));
+//    Ray ray = arCam.ScreenPointToRay(origin);
+
+//    if (_raycastManager.Raycast(ray, _hits))
+//    {
+//         pose = _hits[0].pose;
+//        crossHair.transform.position = pose.position;
+//        crossHair.transform.eulerAngles = new Vector3(90, 0, 0);
+//    }
+//    else if (Physics.Raycast(ray, out hit))
+//    {
+//        crossHair.transform.position = hit.point;
+//        crossHair.transform.up = hit.normal;
+//    }
+//}

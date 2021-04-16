@@ -1,0 +1,33 @@
+ManifestFileVersion: 0
+CRC: 2300518621
+Hashes:
+  AssetFileHash:
+    serializedVersion: 2
+    Hash: 08507ef1532cb1c6d3695be8398fbd5b
+  TypeTreeHash:
+    serializedVersion: 2
+    Hash: bc6dad4dedae0d372cdf245d885db685
+HashAppended: 0
+ClassTypes:
+- Class: 1
+  Script: {instanceID: 0}
+- Class: 4
+  Script: {instanceID: 0}
+- Class: 20
+  Script: {instanceID: 0}
+- Class: 21
+  Script: {instanceID: 0}
+- Class: 23
+  Script: {instanceID: 0}
+- Class: 33
+  Script: {instanceID: 0}
+- Class: 43
+  Script: {instanceID: 0}
+- Class: 48
+  Script: {instanceID: 0}
+- Class: 108
+  Script: {instanceID: 0}
+SerializeReferenceClassIdentifiers: []
+Assets:
+- Assets/Prefabs/officeChair.prefab
+Dependencies: []
