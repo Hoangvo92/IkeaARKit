@@ -13,7 +13,7 @@ public class UIContentFitter : MonoBehaviour
         float childWidth = transform.GetChild(0).GetComponent<RectTransform>().rect.width;
         float width = hg.spacing * childCount + childCount * childWidth + hg.padding.left;
 
-        GetComponent<RectTransform>().sizeDelta = new Vector2(width, 300);
+        GetComponent<RectTransform>().sizeDelta = new Vector2(width, 500);
     }
 
     // Update is called once per frame

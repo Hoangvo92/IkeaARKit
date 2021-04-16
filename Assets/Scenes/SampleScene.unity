@@ -301,6 +301,7 @@ MonoBehaviour:
   m_CustomReticle: {fileID: 0}
   arCam: {fileID: 848371235}
   _raycastManager: {fileID: 673372224}
+  placedObj: {fileID: 0}
   crossHair: {fileID: 1788603132}
 --- !u!4 &111884424
 Transform:
@@ -355,7 +356,7 @@ RectTransform:
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 0}
   m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 0, y: 300}
+  m_SizeDelta: {x: 0, y: 500}
   m_Pivot: {x: 0.5, y: 0}
 --- !u!114 &478117747
 MonoBehaviour:
@@ -995,7 +996,7 @@ RectTransform:
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 1, y: 1}
   m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 640, y: 300}
+  m_SizeDelta: {x: 640, y: 500}
   m_Pivot: {x: 0, y: 1}
 --- !u!114 &977562185
 MonoBehaviour:
@@ -1024,8 +1025,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Padding:
-    m_Left: 40
-    m_Right: 0
+    m_Left: 50
+    m_Right: 50
     m_Top: 0
     m_Bottom: 0
   m_ChildAlignment: 4

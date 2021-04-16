@@ -15,6 +15,8 @@ public class InputManager : ARBaseGestureInteractable
 
     private Touch touch;
 
+    public GameObject placedObj;
+
 
     [SerializeField]private GameObject crossHair;
     private Pose pose;
@@ -41,8 +43,9 @@ public class InputManager : ARBaseGestureInteractable
         if(GestureTransformationUtility.Raycast(gesture.startPosition, _hits,
                TrackableType.PlaneWithinPolygon))
         {
-            GameObject placedObj = Instantiate(DataHandler.Instance.GetFurniture(), pose.position, pose.rotation) as GameObject;
-
+            if (placedObj != null) { Destroy(placedObj); }
+            // GameObject placedObj = Instantiate(DataHandler.Instance.GetFurniture(), pose.position, pose.rotation) as GameObject;
+            placedObj = Instantiate(DataHandler.Instance.GetFurniture(), pose.position, pose.rotation) as GameObject;
             var anchorObject = new GameObject("placementAnchor");
             anchorObject.transform.position = pose.position;
             anchorObject.transform.rotation = pose.rotation;

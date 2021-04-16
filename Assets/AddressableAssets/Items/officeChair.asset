@@ -13,6 +13,6 @@ MonoBehaviour:
   m_Name: officeChair
   m_EditorClassIdentifier: 
   price: 50
-  itemPrefab: {fileID: 4953208492942355822, guid: 5b1df42143c13426fba1ce258bcee8fd,
+  itemPrefab: {fileID: 6211192413264888334, guid: be6fee71ed06a4d29a38838cea898a72,
     type: 3}
   itemImage: {fileID: 21300000, guid: 42405574b38f34e0286142e29c63bf86, type: 3}
