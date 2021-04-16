@@ -50,7 +50,7 @@ MonoBehaviour:
       - m_Id: 8d6da6533051b419592224dbdf4b1e37
         m_Value: ServerData/[BuildTarget]
       - m_Id: 70663cf06a80b41b5af035d370d58106
-        m_Value: https://ikeaassets.s3.amazonaws.com/[BuildTarget]
+        m_Value: https://storage.googleapis.com/ikeagroupclone/[BuildTarget]
     m_ProfileEntryNames:
     - m_Id: ee355d380ba464f1c8d980c89ff9a479
       m_Name: BuildTarget

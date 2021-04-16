@@ -4,6 +4,7 @@ using UnityEngine;
 using UnityEngine.XR.ARFoundation;
 using UnityEngine.EventSystems;
 using UnityEngine.XR.Interaction.Toolkit.AR;
+using UnityEngine.XR.ARSubsystems;
 
 public class InputManager : ARBaseGestureInteractable
 {
@@ -38,7 +39,7 @@ public class InputManager : ARBaseGestureInteractable
             return;
         }
         if(GestureTransformationUtility.Raycast(gesture.startPosition, _hits,
-               UnityEngine.XR.ARSubsystems.TrackableType.PlaneWithinPolygon))
+               TrackableType.PlaneWithinPolygon))
         {
             GameObject placedObj = Instantiate(DataHandler.Instance.GetFurniture(), pose.position, pose.rotation) as GameObject;
 
@@ -62,7 +63,7 @@ public class InputManager : ARBaseGestureInteractable
         Vector3 origin = arCam.ViewportToScreenPoint(new Vector3(0.5f, 0.5f, 0));
      //   Ray ray = arCam.ScreenPointToRay(origin);
 
-        if (GestureTransformationUtility.Raycast(origin, _hits, UnityEngine.XR.ARSubsystems.TrackableType.PlaneWithinPolygon))
+        if (GestureTransformationUtility.Raycast(origin, _hits, TrackableType.PlaneWithinPolygon))
         {
             pose = _hits[0].pose;
             crossHair.transform.position = pose.position;
@@ -72,7 +73,7 @@ public class InputManager : ARBaseGestureInteractable
     }
 
     //update is called once per frame
-    private void FixedUpdate()
+     void FixedUpdate()
     {
         CrosshairCalculation();
     }
