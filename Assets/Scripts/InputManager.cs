@@ -16,6 +16,7 @@ public class InputManager : ARBaseGestureInteractable
     private Touch touch;
 
     public GameObject placedObj;
+    public GameObject parentObj;
 
 
     [SerializeField]private GameObject crossHair;
@@ -46,10 +47,15 @@ public class InputManager : ARBaseGestureInteractable
             if (placedObj != null) { Destroy(placedObj); }
             // GameObject placedObj = Instantiate(DataHandler.Instance.GetFurniture(), pose.position, pose.rotation) as GameObject;
             placedObj = Instantiate(DataHandler.Instance.GetFurniture(), pose.position, pose.rotation) as GameObject;
+            parentObj.transform.position = pose.position;
+            parentObj.transform.rotation = pose.rotation;
+            placedObj.transform.parent = parentObj.transform;//to control the created prefab
+
             var anchorObject = new GameObject("placementAnchor");
             anchorObject.transform.position = pose.position;
             anchorObject.transform.rotation = pose.rotation;
-            placedObj.transform.parent = anchorObject.transform;
+            //placedObj.transform.parent = anchorObject.transform;
+            parentObj.transform.parent = anchorObject.transform;
         }
     }
 
