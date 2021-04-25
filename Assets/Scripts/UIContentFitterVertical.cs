@@ -11,7 +11,6 @@ public class UIContentFitterVertical : MonoBehaviour
         VerticalLayoutGroup vg = GetComponent<VerticalLayoutGroup>();
         int childCount = transform.childCount - 1;
         float childHeight = transform.GetChild(0).GetComponent<RectTransform>().rect.width;
-        Debug.Log(childHeight);
         float height = vg.spacing * childCount + childCount * childHeight + vg.padding.top;
 
         GetComponent<RectTransform>().sizeDelta = new Vector2( 1000, height);

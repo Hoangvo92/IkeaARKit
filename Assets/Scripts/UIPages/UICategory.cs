@@ -36,6 +36,8 @@ public class UICategory : MonoBehaviour
         TableB.onClick.AddListener(chooseTable);
         BedB.onClick.AddListener(chooseBed);
         DecorationB.onClick.AddListener(chooseDecoration);
+
+     //   DataHandler.Instance.SetLabel(label);
     }
     public void chooseChair()
     {
@@ -101,5 +103,6 @@ public class UICategory : MonoBehaviour
         TableB.onClick.AddListener(chooseTable);
         BedB.onClick.AddListener(chooseBed);
         DecorationB.onClick.AddListener(chooseDecoration);
+     //   DataHandler.Instance.SetLabel(label);
     }
 }

@@ -93,7 +93,7 @@ public class DataHandler : MonoBehaviour
         detailPage.SetActive(true);
         inputManager.SetActive(true);
         marker.SetActive(true);
-        XRinteractionManager.SetActive(true);
+       // XRinteractionManager.SetActive(true);
         parentObject.SetActive(true);
 }
 

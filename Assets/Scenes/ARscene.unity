@@ -496,6 +496,10 @@ MonoBehaviour:
   _raycastManager: {fileID: 673372224}
   placedObj: {fileID: 71509726}
   parentObj: {fileID: 231634631}
+  nameitem: {fileID: 1565643669}
+  description: {fileID: 153226806}
+  price: {fileID: 99156780}
+  itemImage: {fileID: 906031450}
   crossHair: {fileID: 1788603132}
 --- !u!4 &111884424
 Transform:
@@ -2473,7 +2477,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 976581385}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7d4f5b7e10bd54d4081c94f9fd4e053b, type: 3}
+  m_Script: {fileID: 11500000, guid: c0d3f8d9309bd4467bebe20544f6c6f6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   nameitem: {fileID: 1565643669}
@@ -3245,7 +3249,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!114 &1132055286
 MonoBehaviour:
   m_ObjectHideFlags: 0

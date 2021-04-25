@@ -14,19 +14,20 @@ public class Menu : MonoBehaviour
     public GameObject InputManager;
     public GameObject DataManager;
     public GameObject Marker;
-    public GameObject XRinteraction;
+    //public GameObject XRinteraction;
     public GameObject parentObj;
 
     public int counter;
     // Start is called before the first frame update
     void Start()
     {
+        counter = 1;
         itemPage.SetActive(false);
         listPage.SetActive(false);
         InputManager.SetActive(false);
         DataManager.SetActive(false);
         Marker.SetActive(false);
-        XRinteraction.SetActive(false);
+       // XRinteraction.SetActive(false);
         parentObj.SetActive(false);
 
         loadMenu1.onClick.AddListener(menu);
@@ -42,10 +43,12 @@ public class Menu : MonoBehaviour
 
     public void menu()
     {
-        counter++;
-        if (counter % 2 == 1)
+        
+        if (counter == 1 )
         {
             menuPage.SetActive(true);
+            loadMenu1.GetComponentInChildren<Text>().text = "End";
+            counter = 0;
         }
         else
         {
@@ -56,8 +59,9 @@ public class Menu : MonoBehaviour
             InputManager.SetActive(false);
             DataManager.SetActive(false);
             Marker.SetActive(false);
-            XRinteraction.SetActive(false);
+            //XRinteraction.SetActive(false);
             parentObj.SetActive(false);
+            counter = 1;
 
         }
 

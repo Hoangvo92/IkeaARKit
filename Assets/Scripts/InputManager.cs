@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 using UnityEngine.XR.ARFoundation;
 using UnityEngine.EventSystems;
 using UnityEngine.XR.Interaction.Toolkit.AR;
@@ -19,6 +20,7 @@ public class InputManager : ARBaseGestureInteractable
     public GameObject parentObj;
 
 
+
     [SerializeField]private GameObject crossHair;
     private Pose pose;
     private Pose secondPose;
@@ -26,7 +28,7 @@ public class InputManager : ARBaseGestureInteractable
     // Start is called before the first frame update
     void Start()
     {
-      
+  
     }
 
     protected override bool CanStartManipulationForGesture(TapGesture gesture)
