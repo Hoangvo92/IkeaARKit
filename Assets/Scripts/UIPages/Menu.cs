@@ -21,7 +21,7 @@ public class Menu : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        counter = 1;
+        
         itemPage.SetActive(false);
         listPage.SetActive(false);
         InputManager.SetActive(false);
@@ -43,12 +43,12 @@ public class Menu : MonoBehaviour
 
     public void menu()
     {
-        
-        if (counter == 1 )
+        counter++;
+        if ((counter % 2) == 1 )
         {
             menuPage.SetActive(true);
             loadMenu1.GetComponentInChildren<Text>().text = "End";
-            counter = 0;
+            //counter = 0;
         }
         else
         {
@@ -61,7 +61,8 @@ public class Menu : MonoBehaviour
             Marker.SetActive(false);
             //XRinteraction.SetActive(false);
             parentObj.SetActive(false);
-            counter = 1;
+            //   counter = 1;
+            loadMenu1.GetComponentInChildren<Text>().text = "Begin";
 
         }
 
