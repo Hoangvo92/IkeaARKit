@@ -38,7 +38,7 @@ public class Menu : MonoBehaviour
     void Update()
     {
 
-        loadMenu1.onClick.AddListener(menu);
+        //loadMenu1.onClick.AddListener(menu);
     }
 
     public void menu()
