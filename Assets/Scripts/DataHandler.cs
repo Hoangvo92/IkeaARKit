@@ -57,6 +57,9 @@ public class DataHandler : MonoBehaviour
             ButtonManager b = Instantiate(buttonPrefab, buttonContainer.transform);
             b.ItemId = current_id;
             b.ButtonTexture = i.itemImage;
+            b.Description = i.description;
+            b.Price = i.price;
+            b.ButtonName = i.nameItem;
             current_id++;
         }
     }

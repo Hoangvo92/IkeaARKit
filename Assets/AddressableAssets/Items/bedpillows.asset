@@ -13,6 +13,8 @@ MonoBehaviour:
   m_Name: bedpillows
   m_EditorClassIdentifier: 
   price: 800
+  nameItem: Bed for 2
+  description: This bed will satisfy your sleep. Enjoy it.
   itemPrefab: {fileID: 2361390174519290666, guid: 7e62c818446f84fe692769a8dd0e1e5c,
     type: 3}
   itemImage: {fileID: 21300000, guid: 3edc59a1b8def45dca71feb64909f449, type: 3}

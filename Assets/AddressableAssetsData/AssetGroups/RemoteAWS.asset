@@ -22,6 +22,7 @@ MonoBehaviour:
     m_ReadOnly: 0
     m_SerializedLabels:
     - furniture
+    - decoration
     m_MainAsset: {fileID: 0}
     m_TargetAsset: {fileID: 0}
   - m_GUID: 11a2afd00edda4e968dcaa46c1f6a0cf
@@ -29,6 +30,7 @@ MonoBehaviour:
     m_ReadOnly: 0
     m_SerializedLabels:
     - furniture
+    - chair
     m_MainAsset: {fileID: 0}
     m_TargetAsset: {fileID: 0}
   - m_GUID: c1f50b5533fcb47a19be11cbc12375f3
@@ -36,27 +38,32 @@ MonoBehaviour:
     m_ReadOnly: 0
     m_SerializedLabels:
     - furniture
-    m_MainAsset: {fileID: 11400000, guid: c1f50b5533fcb47a19be11cbc12375f3, type: 2}
-    m_TargetAsset: {fileID: 11400000, guid: c1f50b5533fcb47a19be11cbc12375f3, type: 2}
+    - chair
+    m_MainAsset: {fileID: 0}
+    m_TargetAsset: {fileID: 0}
   - m_GUID: 34b37d6f753544cdd8b8283aa829715a
     m_Address: Assets/AddressableAssets/Items/victorianSofa.asset
     m_ReadOnly: 0
     m_SerializedLabels:
     - furniture
-    m_MainAsset: {fileID: 0}
-    m_TargetAsset: {fileID: 0}
+    - chair
+    m_MainAsset: {fileID: 11400000, guid: 34b37d6f753544cdd8b8283aa829715a, type: 2}
+    m_TargetAsset: {fileID: 11400000, guid: 34b37d6f753544cdd8b8283aa829715a, type: 2}
   - m_GUID: c29ab82eb1f49424a915319b0d99956f
     m_Address: Assets/AddressableAssets/Items/sofa.asset
     m_ReadOnly: 0
     m_SerializedLabels:
     - furniture
-    m_MainAsset: {fileID: 11400000, guid: c29ab82eb1f49424a915319b0d99956f, type: 2}
-    m_TargetAsset: {fileID: 11400000, guid: c29ab82eb1f49424a915319b0d99956f, type: 2}
+    - chair
+    m_MainAsset: {fileID: 0}
+    m_TargetAsset: {fileID: 0}
   - m_GUID: 3496f00567b7a48b78167a6f4e2bc602
     m_Address: Assets/AddressableAssets/Items/furniture1.asset
     m_ReadOnly: 0
     m_SerializedLabels:
     - furniture
+    - chair
+    - decoration
     m_MainAsset: {fileID: 0}
     m_TargetAsset: {fileID: 0}
   - m_GUID: b991ea896765e4e089cb07f583063d4d
@@ -64,13 +71,15 @@ MonoBehaviour:
     m_ReadOnly: 0
     m_SerializedLabels:
     - furniture
-    m_MainAsset: {fileID: 0}
-    m_TargetAsset: {fileID: 0}
+    - bed
+    m_MainAsset: {fileID: 11400000, guid: b991ea896765e4e089cb07f583063d4d, type: 2}
+    m_TargetAsset: {fileID: 11400000, guid: b991ea896765e4e089cb07f583063d4d, type: 2}
   - m_GUID: 3bdff4077713649f8aa23dfa3bf79f96
     m_Address: Assets/AddressableAssets/Items/bed2.asset
     m_ReadOnly: 0
     m_SerializedLabels:
     - furniture
+    - bed
     m_MainAsset: {fileID: 0}
     m_TargetAsset: {fileID: 0}
   - m_GUID: 3c6373a3c30624daf894c196a6aa91f4
@@ -78,6 +87,7 @@ MonoBehaviour:
     m_ReadOnly: 0
     m_SerializedLabels:
     - furniture
+    - chair
     m_MainAsset: {fileID: 0}
     m_TargetAsset: {fileID: 0}
   - m_GUID: 1de34d1ddea394cb6b899fb0901cb0f9
@@ -85,6 +95,7 @@ MonoBehaviour:
     m_ReadOnly: 0
     m_SerializedLabels:
     - furniture
+    - bed
     m_MainAsset: {fileID: 0}
     m_TargetAsset: {fileID: 0}
   - m_GUID: fd56906932fab4ed8ba1f72aebd3b60b
@@ -92,6 +103,7 @@ MonoBehaviour:
     m_ReadOnly: 0
     m_SerializedLabels:
     - furniture
+    - table
     m_MainAsset: {fileID: 0}
     m_TargetAsset: {fileID: 0}
   - m_GUID: bf4540cd526c5488d9f5116cefd8ba15
@@ -99,6 +111,7 @@ MonoBehaviour:
     m_ReadOnly: 0
     m_SerializedLabels:
     - furniture
+    - chair
     m_MainAsset: {fileID: 0}
     m_TargetAsset: {fileID: 0}
   m_ReadOnly: 0

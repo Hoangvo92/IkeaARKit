@@ -72,6 +72,10 @@ MonoBehaviour:
     m_LabelNames:
     - default
     - furniture
+    - decoration
+    - chair
+    - bed
+    - table
   m_SchemaTemplates: []
   m_GroupTemplateObjects:
   - {fileID: 11400000, guid: 24b3d79de351a45e7a1214971cb431d8, type: 2}

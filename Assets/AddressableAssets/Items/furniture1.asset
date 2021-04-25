@@ -12,7 +12,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 94a48b585ad4d4672a2a712e983c0ee7, type: 3}
   m_Name: furniture1
   m_EditorClassIdentifier: 
-  price: 0
+  price: 1000
+  nameItem: 'Furniture set '
+  description: You should enjoy this set of furniture which has sofa chair, table,
+    and so on.
   itemPrefab: {fileID: 1281638233143171756, guid: 8ce4d3bf0567e4f2383309e207f52e9f,
     type: 3}
-  itemImage: {fileID: 21300000, guid: 8fc74ae4c60794ea980c03aeb15590b5, type: 3}
+  itemImage: {fileID: 21300000, guid: c40dda1cb0596468281623d4ef35296b, type: 3}

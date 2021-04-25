@@ -13,6 +13,9 @@ MonoBehaviour:
   m_Name: tableRus
   m_EditorClassIdentifier: 
   price: 700
+  nameItem: Victorian Table
+  description: This beautiful table will make your breakfast pleasant. You should
+    buy it together with the sofa chairs in our catalog.
   itemPrefab: {fileID: 5873324873520774374, guid: cede83ab60f0f47dabc546d45560ad94,
     type: 3}
   itemImage: {fileID: 21300000, guid: 632cab2ea52e648a7b02ddc8946fb7f5, type: 3}

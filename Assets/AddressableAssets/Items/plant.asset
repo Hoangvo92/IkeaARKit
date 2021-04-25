@@ -13,6 +13,8 @@ MonoBehaviour:
   m_Name: plant
   m_EditorClassIdentifier: 
   price: 10
+  nameItem: Plant
+  description: You can use this plant to decorate your room
   itemPrefab: {fileID: 984088790877745611, guid: bc74a3d51cc3e4fb78ba4f3001f1b4fe,
     type: 3}
   itemImage: {fileID: 21300000, guid: 3c6450018ce694531bbe44f7c74f5b07, type: 3}

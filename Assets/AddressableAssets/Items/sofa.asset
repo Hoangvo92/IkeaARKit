@@ -13,6 +13,9 @@ MonoBehaviour:
   m_Name: sofa
   m_EditorClassIdentifier: 
   price: 300
+  nameItem: Big Sofa
+  description: Every living room needs this big sofa. You will want this sofa for
+    Chistmas.
   itemPrefab: {fileID: 5781058518750613324, guid: 05df89e340eff465fb6dd209c95a2592,
     type: 3}
   itemImage: {fileID: 21300000, guid: 01e3e61c8c7574d619a66a4b71ddafe3, type: 3}

@@ -13,6 +13,8 @@ MonoBehaviour:
   m_Name: bed2
   m_EditorClassIdentifier: 
   price: 400
+  nameItem: Bed for 2
+  description: This bed is very comfortable for users! it is a King size bed.
   itemPrefab: {fileID: 338534490817697697, guid: 7046e1bc9dd7646c7843ab7311a4736e,
     type: 3}
   itemImage: {fileID: 21300000, guid: 4d4fd0fcc7adb43b88819a67acd9d765, type: 3}

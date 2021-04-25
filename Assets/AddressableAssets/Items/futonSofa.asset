@@ -12,7 +12,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 94a48b585ad4d4672a2a712e983c0ee7, type: 3}
   m_Name: futonSofa
   m_EditorClassIdentifier: 
-  price: 0
+  price: 200
+  nameItem: Futon Chair
+  description: Please enjoy this big futon chair. It is very good for couple time.
   itemPrefab: {fileID: 2035643012539115873, guid: 57349ce08729b4da7bb5c0206d3d0f33,
     type: 3}
   itemImage: {fileID: 21300000, guid: 349a1939c893c4514a6ade753e6068f3, type: 3}

@@ -13,6 +13,9 @@ MonoBehaviour:
   m_Name: victorianSofa
   m_EditorClassIdentifier: 
   price: 500
+  nameItem: Victorian Sofa
+  description: Woala! This beautiful sofa chair in victorian style is what every
+    home owner wishes to possess. You should enjoy it.
   itemPrefab: {fileID: 6597811067307046741, guid: 96ff500918d9e4ddaa2b3da8164910c6,
     type: 3}
   itemImage: {fileID: 21300000, guid: 8fc74ae4c60794ea980c03aeb15590b5, type: 3}
