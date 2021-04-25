@@ -13,10 +13,10 @@ public class ButtonManager : MonoBehaviour
   //  public GameObject furniture;
 
     private int _itemId;
-    private float _price;
+    //private float _price;
     private Sprite _buttonTexture;
-    private string _buttonName;
-    private string _description;
+    //private string _buttonName;
+    //private string _description;
     public Sprite ButtonTexture
     {
         set
@@ -31,18 +31,18 @@ public class ButtonManager : MonoBehaviour
         set{  _itemId = value;}
     }
 
-    public string ButtonName
-    {
-        set { _buttonName = value; }
-    }
-    public string Description
-    {
-        set { _description = value; }
-    }
-    public float Price
-    {
-        set { _price = value; }
-    }
+    //public string ButtonName
+    //{
+    //    set { _buttonName = value; }
+    //}
+    //public string Description
+    //{
+    //    set { _description = value; }
+    //}
+    //public float Price
+    //{
+    //    set { _price = value; }
+   // }
     //public
 //pass the list of links in here, choose number, and instantiate the furniture via asset bundle
 
@@ -58,12 +58,12 @@ public class ButtonManager : MonoBehaviour
     {
         if (UIManager.Instance.OnEntered(gameObject))
         {
-            transform.DOScale(Vector3.one * 2, 0.2f);
+            transform.DOScale(Vector3.one * 2, 0.3f);
            // transform.localScale = Vector3.one * 2;
         }
         else
         {
-            transform.DOScale(Vector3.one, 0.2f);
+            transform.DOScale(Vector3.one, 0.3f);
             //  transform.localScale = Vector3.one;
         }
     }

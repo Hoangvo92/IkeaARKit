@@ -6,24 +6,38 @@ using UnityEngine.UI;
 public class Menu : MonoBehaviour
 {
     public Button loadMenu1;
-    public Button loadList;
-    public Button loadItem;
+
     public GameObject menuPage;
     public GameObject listPage;
     public GameObject itemPage;
+
+    public GameObject InputManager;
+    public GameObject DataManager;
+    public GameObject Marker;
+    public GameObject XRinteraction;
+    public GameObject parentObj;
+
     public int counter;
     // Start is called before the first frame update
     void Start()
     {
+        itemPage.SetActive(false);
+        listPage.SetActive(false);
+        InputManager.SetActive(false);
+        DataManager.SetActive(false);
+        Marker.SetActive(false);
+        XRinteraction.SetActive(false);
+        parentObj.SetActive(false);
+
         loadMenu1.onClick.AddListener(menu);
-        loadList.onClick.AddListener(itemList);
-        loadItem.onClick.AddListener(itemDetail);
+
     }
 
     // Update is called once per frame
     void Update()
     {
 
+        loadMenu1.onClick.AddListener(menu);
     }
 
     public void menu()
@@ -36,21 +50,17 @@ public class Menu : MonoBehaviour
         else
         {
             menuPage.SetActive(false);
+
+            itemPage.SetActive(false);
+            listPage.SetActive(false);
+            InputManager.SetActive(false);
+            DataManager.SetActive(false);
+            Marker.SetActive(false);
+            XRinteraction.SetActive(false);
+            parentObj.SetActive(false);
+
         }
 
     }
 
-    public void itemList()
-    {
-        menuPage.SetActive(false);
-        listPage.SetActive(true);
-
-    }
-
-    public void itemDetail()
-    {
-        listPage.SetActive(false);
-        itemPage.SetActive(true);
-
-    }
 }

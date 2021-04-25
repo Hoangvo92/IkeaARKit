@@ -7,6 +7,7 @@ using UnityEngine.AddressableAssets;
 public class DataHandler : MonoBehaviour
 {
     private GameObject furniture;
+    private Item itemChosen;
 
     [SerializeField] private ButtonManager buttonPrefab;
     [SerializeField] private GameObject buttonContainer;
@@ -15,6 +16,13 @@ public class DataHandler : MonoBehaviour
     [SerializeField] private string label;
 
     private int current_id = 0;
+
+    public GameObject listPage;
+    public GameObject detailPage;
+    public GameObject inputManager;
+    public GameObject marker;
+    public GameObject XRinteractionManager;
+    public GameObject parentObject;
 
     private static DataHandler instance;
 
@@ -34,12 +42,24 @@ public class DataHandler : MonoBehaviour
     private async void Start()
     {
         items = new List<Item>();
-    //    LoadItems();
+        //    LoadItems();
+        //label = UICategory.Instance.setLabel();
+        //if (label == null || label == "furniture")
+        //{
+        //    label = UICategory.Instance.setLabel();
+        //    if (label == null)
+        //    {
+        //        label = "furniture";
+        //    }
+           Debug.Log(label);
+        //}
+    
        
         await Get(label);
         CreateButtons();
 
     }
+
     //void LoadItems()
     //{
     //    var items_obj = Resources.LoadAll("Items", typeof(Item));
@@ -57,9 +77,9 @@ public class DataHandler : MonoBehaviour
             ButtonManager b = Instantiate(buttonPrefab, buttonContainer.transform);
             b.ItemId = current_id;
             b.ButtonTexture = i.itemImage;
-            b.Description = i.description;
-            b.Price = i.price;
-            b.ButtonName = i.nameItem;
+           // b.Description = i.description;
+            //b.Price = i.price;
+            //b.ButtonName = i.nameItem;
             current_id++;
         }
     }
@@ -67,12 +87,32 @@ public class DataHandler : MonoBehaviour
     public void SetFurniture(int id)
     {
         furniture = items[id].itemPrefab;
+        itemChosen = items[id];
+
+        listPage.SetActive(false);
+        detailPage.SetActive(true);
+        inputManager.SetActive(true);
+        marker.SetActive(true);
+        XRinteractionManager.SetActive(true);
+        parentObject.SetActive(true);
+}
+
+    public void SetLabel(string l)
+    {
+        label = l;
+        Debug.Log(label);
     }
 
     public GameObject GetFurniture()
     {
         return furniture;
     }
+
+    public Item GetItemDetail()
+    {
+        return itemChosen;
+    }
+
 
     public async Task Get(string label)
     {
