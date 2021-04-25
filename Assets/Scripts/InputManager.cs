@@ -21,6 +21,7 @@ public class InputManager : ARBaseGestureInteractable
 
     [SerializeField]private GameObject crossHair;
     private Pose pose;
+    private Pose secondPose;
    // private RaycastCommand hit;
     // Start is called before the first frame update
     void Start()
@@ -44,19 +45,37 @@ public class InputManager : ARBaseGestureInteractable
         if(GestureTransformationUtility.Raycast(gesture.startPosition, _hits,
                TrackableType.PlaneWithinPolygon))
         {
-            if (placedObj != null) { Destroy(placedObj); }
-            // GameObject placedObj = Instantiate(DataHandler.Instance.GetFurniture(), pose.position, pose.rotation) as GameObject;
-            placedObj = Instantiate(DataHandler.Instance.GetFurniture(), pose.position, pose.rotation) as GameObject;
-            parentObj.transform.position = pose.position;
-            parentObj.transform.rotation = pose.rotation;
-            placedObj.transform.parent = parentObj.transform;//to control the created prefab
+            secondPose = pose;
+            //if (placedObj != null) { Destroy(placedObj); }
+            //// GameObject placedObj = Instantiate(DataHandler.Instance.GetFurniture(), pose.position, pose.rotation) as GameObject;
+            //placedObj = Instantiate(DataHandler.Instance.GetFurniture(), pose.position, pose.rotation) as GameObject;
+            //parentObj.transform.position = pose.position;
+            //parentObj.transform.rotation = pose.rotation;
+            //placedObj.transform.parent = parentObj.transform;//to control the created prefab
 
-            var anchorObject = new GameObject("placementAnchor");
-            anchorObject.transform.position = pose.position;
-            anchorObject.transform.rotation = pose.rotation;
-            //placedObj.transform.parent = anchorObject.transform;
-            parentObj.transform.parent = anchorObject.transform;
+            //var anchorObject = new GameObject("placementAnchor");
+            //anchorObject.transform.position = pose.position;
+            //anchorObject.transform.rotation = pose.rotation;
+            ////placedObj.transform.parent = anchorObject.transform;
+            //parentObj.transform.parent = anchorObject.transform;
         }
+    }
+
+    public void pressedButton()
+    {
+        if (secondPose == null) { return; }
+        if (placedObj != null) { Destroy(placedObj); }
+        // GameObject placedObj = Instantiate(DataHandler.Instance.GetFurniture(), pose.position, pose.rotation) as GameObject;
+        placedObj = Instantiate(DataHandler.Instance.GetFurniture(), secondPose.position, secondPose.rotation) as GameObject;
+        parentObj.transform.position = secondPose.position;
+        parentObj.transform.rotation = secondPose.rotation;
+        placedObj.transform.parent = parentObj.transform;//to control the created prefab
+
+        var anchorObject = new GameObject("placementAnchor");
+        anchorObject.transform.position = secondPose.position;
+        anchorObject.transform.rotation = secondPose.rotation;
+        //placedObj.transform.parent = anchorObject.transform;
+        parentObj.transform.parent = anchorObject.transform;
     }
 
     bool IsPointerOverUI(TapGesture touch)
