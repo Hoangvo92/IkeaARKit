@@ -7,6 +7,8 @@ public class Menu : MonoBehaviour
 {
     public Button loadMenu1;
 
+    public GameObject homebgk;
+
     public GameObject menuPage;
     public GameObject listPage;
     public GameObject itemPage;
@@ -22,6 +24,7 @@ public class Menu : MonoBehaviour
     void Start()
     {
         
+        homebgk.SetActive(false);
         itemPage.SetActive(false);
         listPage.SetActive(false);
         InputManager.SetActive(false);
@@ -47,6 +50,7 @@ public class Menu : MonoBehaviour
         if ((counter % 2) == 1 )
         {
             menuPage.SetActive(true);
+            homebgk.SetActive(true);
             loadMenu1.GetComponentInChildren<Text>().text = "End";
             //counter = 0;
         }
