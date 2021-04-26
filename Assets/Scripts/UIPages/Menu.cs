@@ -57,6 +57,7 @@ public class Menu : MonoBehaviour
         else
         {
             menuPage.SetActive(false);
+            homebgk.SetActive(false);
 
             itemPage.SetActive(false);
             listPage.SetActive(false);

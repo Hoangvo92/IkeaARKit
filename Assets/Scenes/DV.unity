@@ -2818,6 +2818,7 @@ GameObject:
   - component: {fileID: 1453584245}
   - component: {fileID: 1453584244}
   - component: {fileID: 1453584247}
+  - component: {fileID: 1453584248}
   m_Layer: 5
   m_Name: Home
   m_TagString: Untagged
@@ -2873,10 +2874,11 @@ MonoBehaviour:
     m_ColorMultiplier: 1
     m_FadeDuration: 0.1
   m_SpriteState:
-    m_HighlightedSprite: {fileID: 0}
-    m_PressedSprite: {fileID: 0}
-    m_SelectedSprite: {fileID: 0}
-    m_DisabledSprite: {fileID: 0}
+    m_HighlightedSprite: {fileID: 21300000, guid: 6b3db5614f426f44a92bd3ab7cb1d857,
+      type: 3}
+    m_PressedSprite: {fileID: 21300000, guid: deaedf7dea23d7b4fb1711ee6e7d3fa6, type: 3}
+    m_SelectedSprite: {fileID: 21300000, guid: deaedf7dea23d7b4fb1711ee6e7d3fa6, type: 3}
+    m_DisabledSprite: {fileID: 21300000, guid: 6b3db5614f426f44a92bd3ab7cb1d857, type: 3}
   m_AnimationTriggers:
     m_NormalTrigger: Normal
     m_HighlightedTrigger: Highlighted
@@ -2887,7 +2889,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1453584245}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1453584248}
+        m_TargetAssemblyTypeName: HomeBtn, Assembly-CSharp
+        m_MethodName: changeButton
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1453584245
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2908,7 +2922,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 6b3db5614f426f44a92bd3ab7cb1d857, type: 3}
+  m_Sprite: {fileID: 21300000, guid: deaedf7dea23d7b4fb1711ee6e7d3fa6, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -2940,7 +2954,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   loadMenu1: {fileID: 1453584244}
   homebgk: {fileID: 1575632507}
-  homebtn: {fileID: 1453584242}
   menuPage: {fileID: 1021711197}
   listPage: {fileID: 1257613906}
   itemPage: {fileID: 577108516}
@@ -2949,6 +2962,21 @@ MonoBehaviour:
   Marker: {fileID: 23836351}
   parentObj: {fileID: 647438757}
   counter: 0
+--- !u!114 &1453584248
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1453584242}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 036b52291ffa15d4bbccff05922e83c0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  btn: {fileID: 1453584244}
+  one: {fileID: 21300000, guid: deaedf7dea23d7b4fb1711ee6e7d3fa6, type: 3}
+  two: {fileID: 21300000, guid: 6b3db5614f426f44a92bd3ab7cb1d857, type: 3}
 --- !u!1 &1501506805
 GameObject:
   m_ObjectHideFlags: 0
