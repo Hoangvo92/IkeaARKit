@@ -18,6 +18,7 @@ public class InputManager : ARBaseGestureInteractable
 
     public GameObject placedObj;
     public GameObject parentObj;
+    public GameObject anchorObject;
 
 
 
@@ -67,13 +68,14 @@ public class InputManager : ARBaseGestureInteractable
     {
         if (secondPose == null) { return; }
         if (placedObj != null) { Destroy(placedObj); }
+        if (anchorObject != null) { Destroy(anchorObject); }
         // GameObject placedObj = Instantiate(DataHandler.Instance.GetFurniture(), pose.position, pose.rotation) as GameObject;
         placedObj = Instantiate(DataHandler.Instance.GetFurniture(), secondPose.position, secondPose.rotation) as GameObject;
         parentObj.transform.position = secondPose.position;
         parentObj.transform.rotation = secondPose.rotation;
         placedObj.transform.parent = parentObj.transform;//to control the created prefab
 
-        var anchorObject = new GameObject("placementAnchor");
+        anchorObject = new GameObject("placementAnchor");
         anchorObject.transform.position = secondPose.position;
         anchorObject.transform.rotation = secondPose.rotation;
         //placedObj.transform.parent = anchorObject.transform;

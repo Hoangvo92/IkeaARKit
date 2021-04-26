@@ -51,7 +51,7 @@ public class Menu : MonoBehaviour
         {
             menuPage.SetActive(true);
             homebgk.SetActive(true);
-            loadMenu1.GetComponentInChildren<Text>().text = "End";
+           // loadMenu1.GetComponentInChildren<Text>().text = "End";
             //counter = 0;
         }
         else
@@ -67,7 +67,7 @@ public class Menu : MonoBehaviour
             //XRinteraction.SetActive(false);
             parentObj.SetActive(false);
             //   counter = 1;
-            loadMenu1.GetComponentInChildren<Text>().text = "Begin";
+          //  loadMenu1.GetComponentInChildren<Text>().text = "Begin";
 
         }
 
